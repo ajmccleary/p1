@@ -1,14 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.TreeMap;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.SortedMap;
+import java.util.*;
 import java.io.FileWriter;
 import java.io.File;
 
@@ -137,13 +129,25 @@ public class MapExperiment {
     }
 
     public ArrayList<String> tableSearch(HashMap<String, Integer> m, String query){        
-        Set<String> cities = map.keySet();
+        Set<String> cities = m.keySet();
         
-        for (int letter = 97; letter <= 122; letter++) {
+        ArrayList<String> matchingKeys = new ArrayList<String>();
 
+        // System.out.println(query);
+        // System.out.println(query.length());
+
+        for (String city : cities) {
+            if (city.substring(0, query.length()).equals(query)) {
+                matchingKeys.add(city);
+                //System.out.println(city + " DEBUG: " + city.substring(0, query.length()) + " DEBUG: " + query);
+            }
         }
 
-        ArrayList<String> matchingKeys = new ArrayList<String>();
+        //all ye who uncomment here abandon all hope
+        // for (String key : matchingKeys) {
+        //     System.out.println(key);
+        // }
+
         return matchingKeys;
     }
 
