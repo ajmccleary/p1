@@ -136,9 +136,13 @@ public class MapExperiment {
         return matchingKeys;
     }
 
-    public ArrayList<String> tableSearch(HashMap<String, Integer> m, String query){
-        //put code here
+    public ArrayList<String> tableSearch(HashMap<String, Integer> m, String query){        
+        Set<String> cities = map.keySet();
         
+        for (int letter = 97; letter <= 122; letter++) {
+
+        }
+
         ArrayList<String> matchingKeys = new ArrayList<String>();
         return matchingKeys;
     }
