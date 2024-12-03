@@ -143,6 +143,21 @@ public class MapExperiment {
             }
         }
 
+        //sort matches in ascending order (same method as treeSearch)
+        if(matchingKeys.size() > 0){
+            Collections.sort(matchingKeys, new Comparator<String>() {
+                public int compare(String s1, String s2){
+                    int p1 = m.get(s1);
+                    int p2 = m.get(s2);
+                    if (p1 == p2) {
+                        return s1.compareTo(s2);
+                    } else {
+                        return p1 - p2;
+                    }
+                }
+            });
+        }
+
         //all ye who uncomment here abandon all hope
         // for (String key : matchingKeys) {
         //     System.out.println(key);
