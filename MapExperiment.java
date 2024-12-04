@@ -7,7 +7,7 @@ import java.io.File;
 public class MapExperiment {
     static final int MIN_SIZE = 100;
     static final int MAX_SIZE = 100000; // largest possible size is 100,000
-    static final int NUM_REPS = 2;
+    static final int NUM_REPS = 100;
     static final double TTL = 1e12;
     static final String methodName[] = {"Tree", "Hash Table"};
     static final String RESULTS_NAME = "results.csv";
